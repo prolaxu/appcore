@@ -69,6 +69,49 @@ class HomeController extends Controller
 
 ```
 
+### Views
+
+We use twig Templating engine to Seperate Front ends codes and backend code.
+read more about twig.
+https://twig.symfony.com/doc/3.x/templates.html
+
+#### Some Demo
+
+In HomeController
+
+```
+ public function index()
+    {
+        //Passing parameters to view
+        $this->view('home', [
+            'appname' => 'App core'
+        ]);
+    }
+```
+
+`->views/home.php`
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App core</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to {appname}.</h1>
+        <p>Appcore is simple php project set to work in mvc partten. </p>
+    </div>
+</body>
+
+</html>
+```
+
 ### Database Utils
 
 We can use DB class for common db queries.
