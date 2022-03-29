@@ -138,7 +138,7 @@ $post=$db->table('posts')->first();
 $posts=$db->table('posts')->getDesc('id);
 
 // get order ascending by id
-$posts=$db->table('posts')->getDesc('id);
+$posts=$db->table('posts')->getAsc('id);
 
 //Find row by id or any key
 $post=$table('posts)->find(1)
